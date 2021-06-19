@@ -9,4 +9,13 @@ public class Functions {
         }
         return String.valueOf(binary);
     }
+
+    public static int sumBinary(String binary){
+        char[] chars = binary.toCharArray();
+        int sum=0;
+        for(char ch:chars){
+            sum+= (int)ch;
+        }
+        return sum;
+    }
 }
