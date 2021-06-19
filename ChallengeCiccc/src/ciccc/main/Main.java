@@ -11,6 +11,8 @@ public class Main {
         System.out.print("Enter your email: ");
         String email = console.next();
         String emailBinary = functions.stringToBinary(email);
+        int sumBinary = functions.sumBinary(emailBinary);
         System.out.println("Your email " + email + " to binary is "+ emailBinary);
+        System.out.println("The sum of binary digits is: "+ sumBinary );
     }
 }

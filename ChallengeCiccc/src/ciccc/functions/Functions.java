@@ -14,7 +14,7 @@ public class Functions {
         char[] chars = binary.toCharArray();
         int sum=0;
         for(char ch:chars){
-            sum+= (int)ch;
+            sum+= Character.getNumericValue(ch);
         }
         return sum;
     }
