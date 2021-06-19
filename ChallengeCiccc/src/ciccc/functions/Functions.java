@@ -18,4 +18,24 @@ public class Functions {
         }
         return sum;
     }
+
+    public static String caesarCipher(String str, int rotation){
+        char[] chars = str.toCharArray();
+        StringBuilder encripter = new StringBuilder();
+        for(char ch:chars){
+            int aux = ch;
+            int ascii=0;
+            if((aux+rotation)>255){
+                int dif = (aux+rotation)-255;
+                ascii=dif;
+            }
+            else{
+                ascii=aux+rotation;
+            }
+            char valueAscii = (char)ascii;
+            //System.out.println("valueAscii: " + valueAscii);
+            encripter.append(valueAscii);
+        }
+        return String.valueOf(encripter);
+    }
 }

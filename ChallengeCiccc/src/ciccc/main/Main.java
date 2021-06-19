@@ -12,7 +12,9 @@ public class Main {
         String email = console.next();
         String emailBinary = functions.stringToBinary(email);
         int sumBinary = functions.sumBinary(emailBinary);
+        String password = functions.caesarCipher(email,sumBinary);
         System.out.println("Your email " + email + " to binary is "+ emailBinary);
         System.out.println("The sum of binary digits is: "+ sumBinary );
+        System.out.println("Your password is: "+ password);
     }
 }
