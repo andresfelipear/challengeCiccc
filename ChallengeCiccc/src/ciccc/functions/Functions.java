@@ -28,10 +28,8 @@ public class Functions {
         System.out.println(rotation);
         StringBuilder encripter = new StringBuilder();
         for(char ch:chars){
-            System.out.println(rotation);
             int aux = ch;
             int ascii=0;
-            System.out.println(aux);
             if(aux > 122 || aux<STARTALPHA){
                 ascii=aux;
             }
