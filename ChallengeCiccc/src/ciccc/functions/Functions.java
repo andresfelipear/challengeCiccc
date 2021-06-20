@@ -26,7 +26,10 @@ public class Functions {
         for(char ch:chars){
             int aux = ch;
             int ascii=0;
-            if((aux+rotation)>122){
+            if(aux > 122 || aux<STARTALPHA){
+                ascii=aux;
+            }
+            else if((aux+rotation)>122){
                 int dif = (aux+rotation)-122;
                 ascii=STARTALPHA+dif;
             }
