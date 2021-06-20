@@ -21,13 +21,14 @@ public class Functions {
 
     public static String caesarCipher(String str, int rotation){
         char[] chars = str.toCharArray();
+        final int  STARTALPHA = 97;
         StringBuilder encripter = new StringBuilder();
         for(char ch:chars){
             int aux = ch;
             int ascii=0;
-            if((aux+rotation)>255){
-                int dif = (aux+rotation)-255;
-                ascii=dif;
+            if((aux+rotation)>122){
+                int dif = (aux+rotation)-122;
+                ascii=STARTALPHA+dif;
             }
             else{
                 ascii=aux+rotation;
